@@ -1,0 +1,64 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 25pt;
+    background-color: yellow;
+    color: blue;
+}
+
+.menu {
+    background-color: black;
+    color: white;
+}
+
+/* alteração das cores do texto */
+.azul {
+    color: blue;
+}
+
+.vermelho {
+    color: red;
+}
+
+.amarelo {
+    color: yellow;
+}
+
+.verde {
+    color: green;
+}
+
+.tam26 {
+    font-size: 26pt;
+}
+
+.tam36 {
+    font-size: 26pt;
+}
+
+.tam46 {
+    font-size: 26pt;
+}
+
+.tam56 {
+    font-size: 26pt;
+}
+
+#amarelo {
+    color: yellow;
+    background-color: darkblue;
+}
+
+div a {
+    text-decoration: none;
+}
+
+div a:hover {
+    text-decoration: underline;
+}
+
+div a:visited {
+    color: coral;
+}
