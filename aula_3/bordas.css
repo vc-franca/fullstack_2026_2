@@ -1,0 +1,84 @@
+div {
+    margin: 20px;
+    padding: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 cores de bg                                */
+/* -------------------------------------------------------------------------- */
+
+.bg-azul {
+    background-color: aqua;
+}
+
+.bg-verde {
+    background-color: aquamarine;
+}
+
+.bg-vermelho {
+    background-color: coral;
+}
+
+#d1 {
+    position: absolute;
+    top: 10px;
+}
+
+#d2 {
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+
+#d3 {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               cores de borda                               */
+/* -------------------------------------------------------------------------- */
+.b-solida {
+    border: 3px solid black;
+}
+
+.b-pontilhada {
+    border: 3px dotted black;
+}
+
+.b-tracejada {
+    border: 3px dashed black;
+}
+
+.b-dupla {
+    border: 3px double black;
+}
+/*  */
+/* -------------------------------------------------------------------------- */
+/*                          arredondamento de bordas                          */
+/* -------------------------------------------------------------------------- */
+.arredondado {
+    border-radius: 8px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   sombras                                  */
+/* -------------------------------------------------------------------------- */
+.sombra {
+    box-shadow: 1px 1px 5px black;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  displays                                  */
+/* -------------------------------------------------------------------------- */
+
+#p1 {
+    display: inline;
+}
+
+#a1 {
+    display: block;
+}
