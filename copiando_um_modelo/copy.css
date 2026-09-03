@@ -1,0 +1,133 @@
+html {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    width: 60%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    background-color: bisque;
+    border: 3px solid black;
+}
+
+.navbar {
+    background-color: lightskyblue;
+    color: darkred;
+}
+
+.iframes {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.iframe {
+    width: 300px;
+    height: 300px;
+}
+
+.table {
+    border: 3px dashed red;
+}
+
+td,
+th {
+    border: 1px double red;
+}
+
+th {
+    color: red;
+}
+
+.upper-footer {
+    background-color: yellow;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer {
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.aaa {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* ---------------------------------- texto --------------------------------- */
+.text {
+    font-family: sans-serif;
+    font-size: 20pt;
+    color: indigo;
+}
+
+.text-header {
+    color: darkgreen;
+}
+
+.text-footer {
+    font-family: comic-sans;
+    font-size: 15pt;
+}
+
+a {
+    color: darkred;
+}
+
+/* --------------------------------- imagens -------------------------------- */
+.img-header {
+    width: 150px;
+}
+
+.img {
+    width: 300px;
+}
+
+.img-footer {
+    width: 200px;
+    height: 200px;
+}
