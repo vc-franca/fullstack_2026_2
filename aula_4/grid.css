@@ -21,5 +21,24 @@
     background-color: aquamarine;
     grid-template-columns: auto auto auto;
     justify-content: center;
+    grid-template-areas:
+        'topo topo topo'
+        'menu principal direito'
+        'menu rodape';
 }
 
+#s1 {
+    grid-area: topo;
+}
+
+#s2 {
+    grid-area: menu;
+}
+
+#s3 {
+    grid-area: principal;
+}
+
+#s4 {
+    grid-area: direito;
+}

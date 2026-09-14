@@ -1,0 +1,63 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    background-color: burlywood;
+}
+
+.imagem {
+    background-color: blue;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+a {
+    background-color: beige;
+}
+
+section {
+    height: 500px;
+    background-color: darkgray;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-content: center;
+}
+
+section div {
+    background-color: lightsalmon;
+    margin: 10px;
+    text-align: center;
+}
+
+#d1 {
+    order: 2;
+    flex-grow: 2;
+}
+
+#d2 {
+    order: 1;
+    flex-grow: 1;
+}
+
+#d3 {
+    order: 1;
+    flex-grow: 4;
+}
