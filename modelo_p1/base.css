@@ -1,0 +1,88 @@
+/* botão do pânico: */
+/* * { border: 1px solid red; } */
+
+/* -------------------------------------------------------------------------- */
+/*                                RESET GLOBAL                                */
+/* -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Fundamental para padding não quebrar o layout */
+  font-family: sans-serif; /* Mude para a fonte pedida */
+}
+
+/* VARIÁVEIS (Olhe o modelo e preencha antes de começar) */
+:root {
+  --primary: #3498db;
+  --secondary: #2ecc71;
+  --dark: #333333;
+  --light: #f4f4f4;
+  --bg: #ffffff;
+  --radius: 8px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Ajuste conforme o modelo */
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                FLEXBOX UTILS                               */
+/* -------------------------------------------------------------------------- */
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.align-center { align-items: center; }
+.justify-center { justify-content: center; }
+.space-between { justify-content: space-between; }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.wrap { flex-wrap: wrap; }
+
+/* ESPAÇAMENTOS RÁPIDOS */
+.mt-1 { margin-top: var(--space-sm); }
+.mt-2 { margin-top: var(--space-md); }
+.mt-3 { margin-top: var(--space-lg); }
+.mb-1 { margin-bottom: var(--space-sm); }
+.mb-2 { margin-bottom: var(--space-md); }
+
+/* TEXTOS */
+.text-center { text-align: center; }
+.text-primary { color: var(--primary); }
+.bold { font-weight: bold; }
+
+/* -------------------------------------------------------------------------- */
+/*                                REUTILITÁRIOS                               */
+/* -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+.btn:hover { opacity: 0.8; }
+.btn-primary { background: var(--primary); color: white; }
+.btn-secondary { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+
+/* CARDS (Para grids de produtos, serviços, etc.) */
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
