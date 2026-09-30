@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <rect width="600" height="460" rx="24" fill="#4A1E1E"/>
+  <circle cx="300" cy="230" r="175" fill="#FBF6ED"/>
+  <circle cx="300" cy="230" r="150" fill="#F4EADC"/>
+  <circle cx="300" cy="230" r="128" fill="#FBF6ED"/>
+
+  <!-- massa (espaguete) -->
+  <g stroke="#E8C468" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M200 210 Q260 170 320 210 T440 210"/>
+    <path d="M195 235 Q255 195 315 235 T435 235"/>
+    <path d="M205 260 Q265 220 325 260 T430 260"/>
+    <path d="M215 285 Q270 250 320 285 T410 280"/>
+  </g>
+
+  <!-- tomates -->
+  <circle cx="255" cy="200" r="12" fill="#B4392F"/>
+  <circle cx="360" cy="290" r="12" fill="#B4392F"/>
+  <circle cx="330" cy="195" r="10" fill="#C24A3E"/>
+
+  <!-- manjericao -->
+  <path d="M240 260 q-14 -6 -10 -20 q14 -2 18 12 Z" fill="#3F6C51"/>
+  <path d="M370 220 q-14 -6 -10 -20 q14 -2 18 12 Z" fill="#3F6C51"/>
+  <path d="M310 300 q-14 -6 -10 -20 q14 -2 18 12 Z" fill="#3F6C51"/>
+
+  <!-- garfo decorativo -->
+  <g transform="translate(96,120) rotate(18)" fill="#E8C468">
+    <rect x="0" y="0" width="10" height="150" rx="5"/>
+    <rect x="-6" y="0" width="6" height="46" rx="3"/>
+    <rect x="10" y="0" width="6" height="46" rx="3"/>
+  </g>
+</svg>

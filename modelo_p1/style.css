@@ -1,0 +1,72 @@
+header div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sobre-contato a {
+    color: #7A2E2E;
+    text-decoration: none;
+}
+
+.hero {
+    margin-top: 50px;
+    gap: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #4A1E1E;
+}
+
+.botao {
+    text-decoration: none;
+    border: none;
+    width: 150px;
+    padding: 10px 20px;
+    color: #4A1E1E;
+    text-decoration: none;
+    background-color: #C9A24B;
+    border-radius: 5px;
+}
+
+.texto {
+    color: white;
+}
+
+.texto2 {
+    color: #E7DBC3;
+}
+
+.card {
+    width: 400px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    box-shadow: 0px 1px 5px gray;
+    padding: 20px;
+}
+
+.card img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.historia {
+    margin-top: 50px;
+    gap: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #F1E7D3;
+    padding: 100px;
+}
+
+.botao2 {
+    background-color: #C9A24B;
+}
+
+.footer {
+    background-color: #2E2420;
+    color: white;
+}
+
+.topo {
+    width: 500px;
+}

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <rect width="500" height="400" rx="20" fill="#7A2E2E"/>
+  <rect x="0" y="260" width="500" height="140" fill="#5B2222"/>
+
+  <!-- mesa -->
+  <ellipse cx="250" cy="300" rx="190" ry="26" fill="#3F1B1B"/>
+  <rect x="60" y="270" width="380" height="30" rx="6" fill="#8B4B3A"/>
+
+  <!-- garrafa de vinho -->
+  <rect x="150" y="180" width="26" height="92" rx="6" fill="#2E2420"/>
+  <rect x="158" y="150" width="10" height="36" fill="#2E2420"/>
+  <rect x="156" y="140" width="14" height="12" rx="3" fill="#C9A24B"/>
+
+  <!-- taças -->
+  <g fill="none" stroke="#F4D57A" stroke-width="3">
+    <path d="M220 220 q0 26 22 26 q22 0 22 -26 q0 -16 -22 -16 q-22 0 -22 16 Z"/>
+    <line x1="242" y1="246" x2="242" y2="270"/>
+    <line x1="228" y1="270" x2="256" y2="270"/>
+  </g>
+  <path d="M225 220 q3 20 17 22 q14 -2 17 -22 Z" fill="#8B1E3F" opacity="0.85"/>
+
+  <g fill="none" stroke="#F4D57A" stroke-width="3">
+    <path d="M300 220 q0 26 22 26 q22 0 22 -26 q0 -16 -22 -16 q-22 0 -22 16 Z"/>
+    <line x1="322" y1="246" x2="322" y2="270"/>
+    <line x1="308" y1="270" x2="336" y2="270"/>
+  </g>
+  <path d="M305 220 q3 20 17 22 q14 -2 17 -22 Z" fill="#8B1E3F" opacity="0.85"/>
+
+  <!-- vela -->
+  <rect x="90" y="230" width="16" height="40" rx="4" fill="#F4EADC"/>
+  <path d="M98 222 q-6 -10 0 -18 q6 8 0 18 Z" fill="#F2B705"/>
+
+  <!-- luzes penduradas -->
+  <g fill="#F4D57A">
+    <circle cx="90" cy="60" r="7"/>
+    <circle cx="180" cy="40" r="7"/>
+    <circle cx="270" cy="55" r="7"/>
+    <circle cx="360" cy="38" r="7"/>
+    <circle cx="440" cy="60" r="7"/>
+  </g>
+  <path d="M20 20 Q90 70 90 60 M90 60 Q140 20 180 40 M180 40 Q220 70 270 55 M270 55 Q320 15 360 38 M360 38 Q400 65 440 60 M440 60 Q470 25 500 45"
+        stroke="#F4D57A" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>

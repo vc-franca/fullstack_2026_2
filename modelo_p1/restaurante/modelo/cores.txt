@@ -1,0 +1,25 @@
+Paleta de cores — Trattoria Bella
+
+Cores principais
+  Vinho (cor primária) ................. #7A2E2E
+  Vinho escuro (fundo do hero) .......... #4A1E1E
+  Dourado (cor de destaque) ............. #C9A24B
+
+Texto
+  Texto principal ....................... #2E2420
+  Texto secundário (seção "Nossa história") . #5B4A3F
+  Texto neutro (subtítulos de seção) ..... #6B5B4E
+  Texto apagado (rodapé) ................ #9A8A7A
+
+Fundos
+  Branco ............................... #FFFFFF
+  Creme (fundo geral) ................... #FBF6ED
+  Creme escuro (fundo da seção "Nossa história") . #F1E7D3
+  Marrom escuro (fundo do rodapé) ....... #2E2420
+
+Bordas e linhas
+  Bege claro (borda da navbar) .......... #E7DBC3
+  Marrom escuro (borda do rodapé) ....... #4A3C32
+
+Texto sobre fundo escuro (hero, rodapé)
+  Bege claro ............................. #E7DBC3
