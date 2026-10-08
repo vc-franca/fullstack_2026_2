@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: cadetblue;
+}
+
+body div {
+    display: flex;
+    flex-direction: column;
+}
