@@ -5,7 +5,13 @@ const x = Math.floor(
 console.log(x);
 
 function adivinhar() {
+    let list = [];
+
     let num = document.getElementById('num').value;
+
+    list.push(num)
+    list.toString()
+
     document.getElementById('num-digitados').innerHTML = num;
 
     if (num < x) {
