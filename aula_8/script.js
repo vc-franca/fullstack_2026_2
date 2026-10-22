@@ -78,20 +78,56 @@ function animacao() {
 
 
     // move obj
-    if (r1.x == 350) {
-        direcao = -1
-    }
+    // if (r1.x == 350) {
+    //     direcao = -1;
+    // }
 
-    if (r1.x == 0) {
-        direcao = 1;
-    }
+    // if (r1.x == 0) {
+    //     direcao = 1;
+    // }
 
-    r1.x += direcao;
+    // r1.x += direcao;
 
     // desenha obj
     r1.desenhar();
 
-    requestAnimationFrame(animacao)
+    requestAnimationFrame(animacao);
 }
 
-animacao()
+animacao(); 
+
+let veloc = 10
+
+document.addEventListener('keydown', (evento) => {
+    console.log(evento);
+
+    if (evento.key == 'w' || evento.key == 'ArrowUp') {
+        r1.y -= veloc;
+    }
+
+    if (evento.key == 's' || evento.key == 'ArrowDown') {
+        r1.y += veloc;
+    }
+
+    if (evento.key == 'a' || evento.key == 'ArrowLeft') {
+        r1.x -= veloc;
+    }
+
+    if (evento.key == 'd' || evento.key == 'ArrowRight') {
+        r1.x += veloc;
+    }
+});
+
+document.addEventListener('mousemove', (evento) => {
+    console.log(evento);
+
+    let rect = canvas.getBoundingClientRect();
+
+    let xMouse = evento.clientX - rect.left;
+    let yMouse = evento.clientY - rect.top;
+
+    console.log(xMouse, yMouse);
+
+    r1.x = xMouse;
+    r1.y = yMouse;
+});
