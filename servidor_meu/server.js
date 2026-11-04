@@ -1,23 +1,15 @@
 import express from 'express';
-import bodyParser from 'body-parser';
+import path from 'path';
 
 const app = express();
 const port = 8080;
 
-app.use(express.static('./public'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static(path.join(import.meta.dirname, 'public')));
 
-app.set('view engine', 'ejs');
-app.set('views', './views');
-
-app.get('/asd', (req, res) => {
-    res.render('resp.ejs')
+app.get('/app', (req, res) => {
+    res.sendFile(path.join(import.meta.dirname, 'public', 'index_d.html'));
 });
 
 app.listen(port, () => {
     console.log(`server rodando em: http://localhost:${port}`)
 });
-
-
-console.log(`servidor rodando`);
