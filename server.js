@@ -6,8 +6,8 @@ const port = 80;
 
 app.use(express.static(path.join(import.meta.dirname, 'public')));
 
-app.get('/app', (req, res) => {
-    res.sendFile(path.join(import.meta.dirname, 'public', 'index_d.html'));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(import.meta.dirname, 'public', 'index.html'));
 });
 
 app.listen(port, () => {
