@@ -2,20 +2,28 @@ let colors = require('colors');
 let http = require('http');
 let express = require('express');
 let bodyParser = require('body-parser');
+let mongodb = require('mongodb')
+
+const MongoClient = mongodb.MongoClient;
+const uri = 'mongodb://localhost:27017';
+const client = new MongoClient(uri, { useNewUrlParser: true });
+
+let dbo = client.db('exemplo_bd');
+let usuarios = dbo.collection('usuarios');
 
 let app = express();
 
 app.use(express.static('./public'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.set('view engine', 'ejs'); 	 
+app.set('view engine', 'ejs');
 app.set('views', './views');
 
 let server = http.createServer(app);
 server.listen(3000);
 
-console.log(`servidor rodando`.rainbow);
+console.log(`servidor rodando`);
 
 /* ------------------------------------ x ----------------------------------- */
 app.get('/cadastrar', (req, res) => {
@@ -43,3 +51,15 @@ app.post('/cadastrar', (req, res) => {
     console.log(nome, sobrenome, email, senha);
 });
 
+app.post("/cadastrar_usuario", (req, resp) => {
+    var data = { dbNome: req.body.nome, dbLogin: req.body.login, dbSenha: req.body.senha };
+
+    usuarios.insertOne(data, (err) => {
+        if (err) {
+            console.log(err);
+            resp.render('resposta_usuario.ejs', { resposta: "Erro ao cadastrar usuário!" });
+        } else {
+            resp.render('resposta_usuario.ejs', { resposta: "Usuário cadastrado com sucesso!" });
+        }
+    });
+});
