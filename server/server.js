@@ -1,4 +1,3 @@
-let colors = require('colors');
 let http = require('http');
 let express = require('express');
 let bodyParser = require('body-parser');
@@ -62,4 +61,59 @@ app.post("/cadastrar_usuario", (req, resp) => {
             resp.render('resposta_usuario.ejs', { resposta: "Usuário cadastrado com sucesso!" });
         }
     });
+});
+
+app.post('/logar_usuario', (req, res) => {
+    let login = req.body.login;
+    let senha = req.body.senha;
+
+    let data = { dbLogin: login, dbSenha: senha };
+
+    usuarios.find(data).toArray((err, items) => {
+        if (err) {
+            res.render('resposta_usuario.ejs', { resposta: "Erro ao buscar usuário" });
+        }
+
+        if (items.length == 0) {
+            res.render('resposta_usuario.ejs', { resposta: "Usuário ou senha não encontrados" });
+        }
+
+        res.render('resposta_usuario.ejs', { resposta: 'Usuário logado com sucesso!' });
+    });
+});
+
+app.post('/editar_usuario', async (req, res) => {
+    let login = req.body.login;
+    let senha = req.body.senha;
+    let novaSenha = req.body.novasenha;
+
+    let data = { dbLogin: login, dbSenha: senha };
+    let newData = { $set: { dbSenha: novaSenha } };
+
+    const result = await usuarios.updateOne(data, newData);
+
+    console.log(result);
+
+    if (result.matchedCount == 0) {
+        res.render('resposta_usuario.ejs', { resposta: 'Usuário ou senha não encontrados' });
+    }
+
+    res.render('resposta_usuario.ejs', { resposta: 'Senha atualizada com sucesso!' });
+});
+
+app.post('/remover_usuario', async (req, res) => {
+    let login = req.body.login;
+    let senha = req.body.senha;
+
+    let data = { dbLogin: login, dbSenha: senha };
+
+    const result = await usuarios.deleteOne(data);
+
+    console.log(result);
+
+    if (result.deletedCount == 0) {
+        res.render('resposta_usuario.ejs', { resposta: 'Usuário/senha não encontrados' });
+    }
+
+    res.render('resposta_usuario.ejs', { resposta: 'user deletado' });
 });
