@@ -11,6 +11,10 @@
     <h1>resposta do servidor</h1>
 
     <h3><%= resposta %></h3>
+
+    <% if (resposta == "usuário logado com sucesso!") { %>
+        <a href="/carros">Clique aqui para acessar a página de carros</a>
+    <% } %>
 </body>
 
 </html>

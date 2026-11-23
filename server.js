@@ -40,7 +40,7 @@ app.post('/cadastrar', async (req, res) => {
 
         console.log(`resultado: ${JSON.stringify(result)}`);
 
-        res.render('res_usuario.ejs', {
+        return res.render('res_usuario.ejs', {
             resposta: 'usuário cadastrado com sucesso!'
         });
     } catch (err) {
@@ -73,6 +73,18 @@ app.post('/logar', async (req, res) => {
         res.render('res_usuario.ejs', {
             resposta: `Erro ao logar usuário: ${err}`
         });
+    }
+});
+
+app.get('/carros', async (req, res) => {
+    try {
+        const items = await carros.find().toArray();
+
+        res.render('carros.ejs', {
+            carros: items
+        });
+    } catch(err) {
+        console.error(`Erro ao buscar carros: ${err}`);
     }
 });
 
