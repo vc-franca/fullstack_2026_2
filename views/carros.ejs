@@ -5,69 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD de carros</title>
-    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            background-color: #e6f0ff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        article {
+            background-color: #f2f2f2;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input,
+        select,
+        button {
+            margin: 5px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Gerenciar carros</h1>
 
     <% if (mensagem) { %>
-        <p role="status"><%= mensagem %></p>
-    <% } %>
-
-    <section>
-        <h2>Cadastrar carro</h2>
-        <form action="/carros/cadastrar" method="post">
-            <p><label>Marca: <input type="text" name="marca" required></label></p>
-            <p><label>Modelo: <input type="text" name="modelo" required></label></p>
-            <p><label>Cor: <input type="text" name="cor" required></label></p>
-            <p><label>Ano: <input type="number" name="ano" required></label></p>
-            <p>
-                <label for="novo-automatico">Câmbio automático:</label>
-                <select id="novo-automatico" name="automatico">
-                    <option value="false">Não</option>
-                    <option value="true">Sim</option>
-                </select>
-            </p>
-            <button type="submit">Cadastrar</button>
-        </form>
-    </section>
-
-    <section>
-        <h2>Carros cadastrados</h2>
-        <% if (carros.length === 0) { %>
-            <p>Nenhum carro cadastrado.</p>
+        <p role="status">
+            <%= mensagem %>
+        </p>
         <% } %>
 
-        <% carros.forEach((carro) => { %>
-            <article>
-                <h3><%= carro.marca %> <%= carro.modelo %></h3>
-
-                <h4>Editar carro</h4>
-                <form action="/carros/editar" method="post">
-                    <input type="hidden" name="id" value="<%= carro._id %>">
-                    <p><label>Marca: <input type="text" name="marca" value="<%= carro.marca %>" required></label></p>
-                    <p><label>Modelo: <input type="text" name="modelo" value="<%= carro.modelo %>" required></label></p>
-                    <p><label>Cor: <input type="text" name="cor" value="<%= carro.cor %>" required></label></p>
-                    <p><label>Ano: <input type="number" name="ano" value="<%= carro.ano %>" required></label></p>
+            <section>
+                <h2>Cadastrar carro</h2>
+                <form action="/carros/cadastrar" method="post">
+                    <p><label>Marca: <input type="text" name="marca" required></label></p>
+                    <p><label>Modelo: <input type="text" name="modelo" required></label></p>
+                    <p><label>Cor: <input type="text" name="cor" required></label></p>
+                    <p><label>Ano: <input type="number" name="ano" required></label></p>
                     <p>
-                        <label for="automatico-<%= carro._id %>">Câmbio automático:</label>
-                        <select id="automatico-<%= carro._id %>" name="automatico">
-                            <option value="false" <%= carro.automatico ? '' : 'selected' %>>Não</option>
-                            <option value="true" <%= carro.automatico ? 'selected' : '' %>>Sim</option>
+                        <label for="novo-automatico">Câmbio automático:</label>
+                        <select id="novo-automatico" name="automatico">
+                            <option value="false">Não</option>
+                            <option value="true">Sim</option>
                         </select>
                     </p>
-                    <button type="submit">Salvar alterações</button>
+                    <button type="submit">Cadastrar</button>
                 </form>
+            </section>
 
-                <h4>Excluir carro</h4>
-                <form action="/carros/excluir" method="post">
-                    <input type="hidden" name="id" value="<%= carro._id %>">
-                    <button type="submit">Excluir</button>
-                </form>
-            </article>
-        <% }) %>
-    </section>
+            <section>
+                <h2>Carros cadastrados</h2>
+                <% if (carros.length===0) { %>
+                    <p>Nenhum carro cadastrado.</p>
+                    <% } %>
+
+                        <% carros.forEach((carro)=> { %>
+                            <article>
+                                <h3>
+                                    <%= carro.marca %>
+                                        <%= carro.modelo %>
+                                </h3>
+
+                                <h4>Editar carro</h4>
+                                <form action="/carros/editar" method="post">
+                                    <input type="hidden" name="id" value="<%= carro._id %>">
+                                    <p><label>Marca: <input type="text" name="marca" value="<%= carro.marca %>"
+                                                required></label></p>
+                                    <p><label>Modelo: <input type="text" name="modelo" value="<%= carro.modelo %>"
+                                                required></label></p>
+                                    <p><label>Cor: <input type="text" name="cor" value="<%= carro.cor %>"
+                                                required></label></p>
+                                    <p><label>Ano: <input type="number" name="ano" value="<%= carro.ano %>"
+                                                required></label></p>
+                                    <p>
+                                        <label for="automatico-<%= carro._id %>">Câmbio automático:</label>
+                                        <select id="automatico-<%= carro._id %>" name="automatico">
+                                            <option value="false" <%=carro.automatico ? '' : 'selected' %>>Não</option>
+                                            <option value="true" <%=carro.automatico ? 'selected' : '' %>>Sim</option>
+                                        </select>
+                                    </p>
+                                    <button type="submit">Salvar alterações</button>
+                                </form>
+
+                                <h4>Excluir carro</h4>
+                                <form action="/carros/excluir" method="post">
+                                    <input type="hidden" name="id" value="<%= carro._id %>">
+                                    <button type="submit">Excluir</button>
+                                </form>
+                            </article>
+                            <% }) %>
+            </section>
 </body>
 
 </html>
